@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Board</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js.js" defer></script>
+</head>
+<body>
+  <main class="board-app">
+    <h1>Board</h1>
+
+    <form id="cardform" class="add" novalidate>
+      <div class="field">
+        <label for="owner">Owner</label>
+        <input id="owner" name="owner" autocomplete="off" placeholder="type a name">
+        <div id="error-owner" class="error-message"></div>
+      </div>
+
+     <div class="field">
+  <label for="Position">Position</label>
+  <input
+    id="Position"
+    name="Position"
+    placeholder="left or right"
+    autocomplete="off"
+  >
+  <div id="error-position" class="error-position"></div>
+</div>
+
+      <div class="field">
+        <label for="tasktitle">Task title</label>
+        <select id="tasktitle" name="tasktitle"></select>
+      </div>
+
+      <button type="submit">add</button>
+    </form>
+
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search a task">
+    </div>
+
+    <div id="card" class="card"></div>
+  </main>
+</body>
+</html>

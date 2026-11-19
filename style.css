@@ -1,0 +1,109 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f3ff;
+  color: #1e1b4b;
+  margin: 0;
+}
+.board-app {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+
+.add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  background: white;
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 4px 0 #e2e8f0;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 150px;
+  flex: 1;
+}
+.field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #475569;
+}
+input,
+select {
+  padding: 8px 10px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font: inherit;
+  background: white;
+}
+.add button {
+  align-self: center;
+  padding: 9px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #7c3aed;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.error-message,
+.error-position,
+.error-category {
+  color: #e11d48;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0;
+  min-height: 1em;
+}
+.filters {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0;
+}
+.filters input {
+  flex: 1;
+}
+
+
+#card,
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.task-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: white;
+  padding: 14px;
+  border-radius: 16px;
+  box-shadow: 0 4px 0 #e2e8f0;
+}
+.task-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.task-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.task-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: #e11d48;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
