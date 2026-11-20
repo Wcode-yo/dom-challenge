@@ -18,28 +18,28 @@ function afficher(arr = tasks) {
   card.textContent = "";
   tasktitle.innerHTML = "";
 
-  arr.forEach(tache => {
+  arr.forEach(task => {
     const taskCard = document.createElement("div");
     taskCard.classList.add("task-card");
     // titre
     const title = document.createElement("h3");
-    title.textContent = tache.title;
+    title.textContent = task.title;
     // owner
     const owner = document.createElement("p");
-    owner.textContent = "Owner: " + tache.owner;
+    owner.textContent = "Owner: " + task.owner;
     // position
     const position = document.createElement("p");
-    position.textContent = "Position: " + tache.position;
+    position.textContent = "Position: " + task.position;
     // bouton supprimer
     const btn = document.createElement("button");
     btn.classList.add("btn");
     btn.textContent = "supprimer";
 
     const option = document.createElement("option");
-    option.textContent = tache.title;
+    option.textContent = task.title;
 
     btn.addEventListener("click", () => {
-      const index = tasks.findIndex((element) => element.id === tache.id);
+      const index = tasks.findIndex((element) => element.id === task.id);
       tasks.splice(index, 1);
       searchtask(search.value); 
     });
@@ -65,8 +65,7 @@ const errorposition = document.querySelector("#error-position");
 const form = document.querySelector("#cardform");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  errorMessage.textContent = "";
-  errorposition.textContent = "";
+  
 
   const data = readForm();
 
